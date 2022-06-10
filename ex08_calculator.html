@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기</title>
+	<script>
+	
+	function cal( i ){
+		//Number() <- 정수형태의 문자열을 실제 정수로 바꿔주는 기능
+
+		var su1 =document.getElementById("su1").value.trim();//.trim()공백제거
+		var su2 = document.getElementById("su2").value.trim();
+		var res = document.getElementById("result");
+		
+		//.equals 안씀
+		if( su1 == ''){
+			alert('su1에 값을 입력하세요');
+			return; //중단
+		}
+		if( su2 == ''){
+			alert('su2에 값을 입력하세요');
+			return; //중단
+		}
+		
+		switch( i ){
+		
+		case '+':
+				res.value = Number(su1) + Number(su2); //+기능은 두가지 때문에
+				break;
+		case '-':
+				res.value = su1 - su2; //number 안 씌어도 계산 해줌
+				break;
+		case '*':
+				res.value = su1 * su2;
+				break;
+		case '/':
+				res.value = (su1 / su2).toFixed(2);
+				break;
+		}
+		
+
+	}
+	
+	</script>
+</head>
+	<body>
+		<table border="1">
+			<tr>
+				<th class="su">수1</th>
+				<td><input id="su1"></td>
+			</tr>
+			<tr>
+				<th class="su">수2</th>
+				<td><input id="su2"></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">
+					<input type="button" value="+" onclick="cal('+')">
+					<input type="button" value="-" onclick="cal('-');">			
+					<input type="button" value="*" onclick="cal('*');">			
+					<input type="button" value="/" onclick="cal('/');">
+					
+				</td>				
+			</tr>
+			<tr>
+				<th class="res">결과</th>
+				<td><input id="result"></td>
+			
+			</tr>
+		</table>
+	</body>
+</html>

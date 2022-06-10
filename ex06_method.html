@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트의 메서드 ( 함수 )</title>
+	<script>
+		//자바스크립트의 함수
+		function test(){
+			alert("클릭확인");
+			
+		}
+		
+		function m_param( n ){
+			alert(n);
+		}
+		
+		function send(){
+			//name이라는 아이디를 가진 태그를 찾아서
+			//해당 태그에 쓰여있는 value를 alert()으로 출력하기!
+			var res = document.getElementById("name");
+			var value = res.value; 
+			alert(value);
+		}
+		
+		function send2(){
+			var res = document.getElementById("res").value;
+			var m_div = document.getElementById("m_div");
+			m_div.innerHTML = res;
+			
+		}
+	</script>
+
+
+</head>
+
+	<body>
+
+		<input type="button" value="버튼1" onclick="test();">
+		<input type="button" value="파라미터 버튼" onclick="m_param('10');">
+
+		<br>
+		
+		
+		<input id="name" type="text">
+		<input type="button" value="확인" onclick="send();">
+		
+		<hr>
+		
+		<input id="res">
+		<input type="button" value="확인" onclick="send2();">
+		<div id="m_div">
+			
+		</div>
+		
+	</body>
+</html>

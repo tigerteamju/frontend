@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 슬라이드 예제</title>
+
+	<script>
+		//다이렉트로 값을 넣어두고 시작하는 변수의 경우 전역으로 지정이 가능
+		var num = 1;
+		var path = "image/img";
+		
+		//아래 gallery변수와 같이 ...ById()를 통한 검색은 전역에서 불가
+		//var gallery = document.getElementById("gallery");
+
+		function next(){
+			num++;
+			if( num == 8){
+				num =1;
+			}
+			var gallery = document.getElementById("gallery");
+			gallery.src = path + num+ ".jpg";
+		}
+		
+		function prev(){
+			num--;
+			if( num < 1){
+				num =7;
+			}
+			var gallery = document.getElementById("gallery");
+			gallery.src = path + num+ ".jpg";
+		}
+	</script>
+</head>
+	<body>
+		<div>
+			<p>
+				<a onclick="prev();">
+					<img src="image/left_btn.png"/>
+				</a>
+				
+				
+				<img id="gallery" src="image/img1.jpg"
+					width="300" height="200"/>
+				
+				
+				<a onclick="next();">
+					<img src="image/right_btn.png"/>
+				</a>
+			</p>
+		
+		</div>
+	</body>
+</html>

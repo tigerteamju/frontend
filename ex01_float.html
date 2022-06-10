@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>  </title>
+		
+		<style>
+			*{margin:0; padding:0;}
+			
+			/*float : 블록요소의 객체를 왽콕이나 오른쪽으로 나란히 정렬하기 위한 속성
+				float은 '부유하다'의 의미를 가지고 있으므로, 부모영역에 영향을 받지 않고
+				공중에 떠오른 형태가 된다*/
+				
+			#container{ font:12px "굴림", sans-serif;
+						margin:10px auto;
+						width:500px;
+						border:5px solid #caa;
+						padding:10px;
+						background:#fdd;
+						/* 부유하고 있는 자식의 높이를 부모가 인지하도록 
+						hidden을 통해 'float을 해제'할 필요가 있다*/	
+						overflow: hidden;							
+						}
+						
+			h1{text-align:center;}
+			
+			.green{width: 200px; 
+					padding:15px;
+					height:100px; 
+					background:#dda;
+					float:left;	
+					}
+					
+			.coffee{width: 200px; 
+					padding:15px;
+					height:100px; 
+					background:#ba7;
+					float:right;
+					}
+		</style>
+	</head>
+	
+	<body>
+		<div id="container">
+			<h1>커피와 녹차</h1>
+			
+			<div class ="green">
+				녹차는 존맛
+			</div>
+			
+			<div class="coffee">
+				커피원두는 자바가 킹
+			</div>
+		</div>
+
+
+
+	</body>
+	
+</html>

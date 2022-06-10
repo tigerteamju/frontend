@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>테이블 스타일 변경</title>
+	<link rel="stylesheet" href="css/reset.css"/>
+	
+	<style>
+		table{width:900px; height:450px;
+			margin:0 auto;}
+			
+		caption{ font:bold 25px sans-serif;
+				margin:10px 0;}
+				
+		thead th{padding:15px 0 ;
+				font: bold 25px "굴림", sans-serif;
+				background:#aaf;
+				width:180px;
+				}
+				
+		thead th:last-child{width:220px;}
+		
+		td{text-align:center;}
+		
+		thead{border-bottom:5px solid black;}
+	
+	</style>
+</head>
+	<body>
+		<table border="1">
+			<caption>업종별 모범거래 기준</caption>
+			
+			<thead>
+				<tr>
+					<th>구분</th>
+					<th>제빵</th>
+					<th>피자</th>
+					<th>치킨</th>
+					<th>커피</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<th>영업지역</th>
+					<td>500m</td>
+					<td>1,500m</td>
+					<td>800m</td>
+					<td>500m</td>
+				</tr>
+				
+				<tr>
+					<th>광고비용</th>
+					<td>관련내용 없음</td>
+					<td>관련내용 없음</td>
+					<td>관련내용 없음</td>
+					<td>총 광고비 본사와 사전 협의</td>
+				</tr>
+				<tr>
+					<th>개런티</th>
+					<td>관련내용 없음</td>
+					<td>관련내용 없음</td>
+					<td>관련내용 없음</td>
+					<td>월 1회 정산</td>
+				</tr>
+			</tbody>
+			
+		</table>
+	</body>
+</html>
