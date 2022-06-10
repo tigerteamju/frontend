@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>메뉴CSS정의하기</title>
+		
+		<style>
+		
+			*{margin:0; padding:0;}
+			
+			ul{width:130px;}
+			
+			li{list-style :none;}
+						
+			a{  display:block; /*글씨 밖에도 클릭 가능*/
+				background:#f30;
+				padding:5px;
+				margin:3px 0; /*인라인 요소는 가로본능/ 위에 신경 안씀*/
+				text-decoration: none; /* a태그의 밑줄 제거*/
+				color:#fff;}		
+			
+			/*hover : a태그에 마우스를 올렸을 때 반응하는 가상클래스*/		
+			a:hover	{background:#0c0; font-weight:bold;}
+				
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<h1>주메뉴</h1>
+			
+			<ul>
+				<li><a href= "#">COMPANY</a></li>
+				<li><a href= "#">PRODUCT</a></li>
+				<li><a href= "#">SERVICE</a></li>
+				<li><a href= "#">COMMUNITY</a></li>
+			</ul>
+		</div>
+
+	</body>
+</html>
